@@ -126,6 +126,13 @@ body {
     padding-top: 60px;
     font-size: 15px;
   }
+  
+
+  .hero-video {
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+  }
 
   .hero-section {
     min-height: 80vh;
