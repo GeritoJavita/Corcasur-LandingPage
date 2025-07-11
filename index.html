@@ -153,21 +153,25 @@
       <h2 class="text-center text-primary fw-bold mb-4">Contáctanos</h2>
       <div class="row justify-content-center">
         <div class="col-lg-8">
-          <form>
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre completo" required />
-            </div>
-            <div class="mb-3">
-              <label for="correo" class="form-label">Correo Electrónico</label>
-              <input type="email" class="form-control" id="correo" placeholder="tucorreo@ejemplo.com" required />
-            </div>
-            <div class="mb-3">
-              <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-          </form>
+          <form id="contact-form">
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input type="text" class="form-control" name="nombre" required />
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Correo Electrónico</label>
+    <input type="email" class="form-control" name="email" required />
+  </div>
+  <div class="mb-3">
+    <label for="mensaje" class="form-label">Mensaje</label>
+    <textarea class="form-control" name="mensaje" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+</form>
+
+<!-- Mensaje de respuesta -->
+<div id="form-status" class="mt-3"></div>
+
         </div>
       </div>
     </div>
@@ -195,6 +199,27 @@
 <a href="https://wa.me/51902053826" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="60" height="60">
 </a>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  // Inicializar EmailJS
+  emailjs.init("template_qikturc"); // 🔁 Reemplaza con tu Public Key
+
+  // Enviar formulario
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("prueba123", "template_qikturc", this)
+      .then(function () {
+        document.getElementById("form-status").innerHTML = '<div class="alert alert-success">Mensaje enviado correctamente ✅</div>';
+        document.getElementById("contact-form").reset();
+      }, function (error) {
+        console.error(error);
+        document.getElementById("form-status").innerHTML = '<div class="alert alert-danger">Error al enviar el mensaje ❌</div>';
+      });
+  });
+</script>
 
 </body>
 </html>
