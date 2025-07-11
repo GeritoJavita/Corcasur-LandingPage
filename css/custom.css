@@ -1,0 +1,63 @@
+:root {
+  --primary-color: #1E3A5F;
+  --secondary-color: #C7A148;
+  --light-bg: #F9F9F9;
+}
+
+body {
+  padding-top: 70px;
+  font-family: 'Segoe UI', sans-serif;
+  color: #1A1A1A;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #162c48;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background: url('../img/hero.jpg') center/cover no-repeat;
+  background-blend-mode: darken;
+  background-color: rgba(0,0,0,0.4);
+}
+.fixed-top {
+    height: 70px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+/* Imágenes uniformes para cards de servicios */
+.service-img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+/* Estilo base para cards */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+/* Hover para resaltar visualmente */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+
+}
