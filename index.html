@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-
   <title>Corcasur | Servicios Gastronómicos Profesionales</title>
-<link rel="icon" href="img/cocinando.png" type="image/png" />
-
+  <link rel="icon" href="img/cocinando.png" type="image/png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="stylesheet" href="css/custom.css" />
 </head>
 <body>
@@ -17,7 +15,11 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="#">CORCASUR</a>
+    <a class="navbar-brand" href="#">
+  <img src="img/logo.png" alt="Logo Corcassur" class="logo-navbar" />
+</a>
+
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -25,9 +27,10 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
-           <li class="nav-item"><a class="nav-link" href="#calidad">Calidad</a></li>
+          <li class="nav-item"><a class="nav-link" href="#calidad">Calidad</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">Preguntas</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonios">Reseñas</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-          
         </ul>
       </div>
     </div>
@@ -35,31 +38,48 @@
 
  <!-- HERO -->
 <header class="hero-section d-flex align-items-center text-white text-center">
-  <!-- Video de fondo -->
-  <video class="hero-video" autoplay muted loop playsinline>
+  <!-- Video de fondo optimizado -->
+  <video class="hero-video" autoplay muted loop playsinline preload="auto">
     <source src="vid/video.mp4" type="video/mp4">
     Tu navegador no soporta video HTML5.
   </video>
 
   <!-- Contenido por encima del video -->
   <div class="container hero-content">
-    <h1 class="display-4 fw-bold">Alimentación con Sabor y Excelencia</h1>
-    <p class="lead">Concesionarios, catering, cafeterías y más. Calidad que nutre.</p>
-    <a href="#servicios" class="btn btn-warning btn-lg mt-3">Explorar Servicios</a>
+    <h1 class="display-4 fw-bold mb-4">Tu Socio Estratégico en Alimentación</h1>
+    <p class="lead mb-5">Servicios gastronómicos con sabor y excelencia que sobrepasan las exigencias del mercado</p>
+    <div class="d-flex gap-3 justify-content-center">
+      <a href="#servicios" class="btn btn-warning btn-lg px-4">Nuestros Servicios</a>
+      <a href="#contacto" class="btn btn-outline-light btn-lg px-4">Contáctanos</a>
+    </div>
   </div>
 </header>
-
 
   <!-- NOSOTROS -->
   <section id="nosotros" class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-md-6">
-          <img src="img/chefperu.jpg" class="img-fluid rounded shadow-sm" alt="Nosotros">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img src="img/chefperu.jpg" class="img-fluid rounded shadow-sm" alt="Equipo Corcasur" loading="lazy">
         </div>
         <div class="col-md-6">
-          <h2 class="text-primary fw-bold">¿Quiénes Somos?</h2>
-          <p class="mt-3">Corcasur es una empresa peruana con más de 10 años de experiencia en alimentación institucional, catering y cafetería. Brindamos soluciones gastronómicas con pasión, tecnología y sabor.</p>
+          <h2 class="text-primary fw-bold mb-4">¿Quiénes Somos?</h2>
+          <p class="lead">Corcasur es una empresa peruana con un staff de profesionales altamente capacitados y con amplia experiencia en el mundo gastronómico.</p>
+          <p>Brindamos soluciones "con sabor" a los clientes más exigentes de cada uno de los sectores en los que estamos dirigidos, garantizando el más alto nivel de servicio y calidad de los alimentos.</p>
+          <div class="mt-4">
+            <div class="d-flex align-items-center mb-2">
+              <i class="fas fa-check-circle text-warning me-2"></i>
+              <span>Más de 10 años de experiencia</span>
+            </div>
+            <div class="d-flex align-items-center mb-2">
+              <i class="fas fa-check-circle text-warning me-2"></i>
+              <span>Profesionales altamente capacitados</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="fas fa-check-circle text-warning me-2"></i>
+              <span>Comprometidos con la mejora continua</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -68,166 +88,418 @@
   <!-- SERVICIOS -->
   <section id="servicios" class="py-5" data-aos="fade-up">
     <div class="container">
-      <h2 class="text-center text-primary fw-bold mb-5">Nuestros Servicios</h2>
+      <div class="text-center mb-5">
+        <h2 class="text-primary fw-bold">Nuestros Servicios</h2>
+        <p class="text-muted">Soluciones gastronómicas personalizadas para cada necesidad</p>
+      </div>
       <div class="row g-4">
 
         <!-- Servicio 1 -->
         <div class="col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="img/catering.jpg" class="card-img-top service-img" alt="Catering">
+          <div class="card h-100 shadow-sm border-0 overflow-hidden">
+            <div class="service-img-container">
+              <img src="img/catering.jpg" class="card-img-top service-img" alt="Catering" loading="lazy">
+            </div>
             <div class="card-body">
               <h5 class="card-title text-primary">Catering & Buffet</h5>
-              <p class="card-text">Servicio completo y personalizado para eventos corporativos y sociales. Calidad y presentación impecable.</p>
+              <p class="card-text">Servicio completo para eventos corporativos y sociales con atención esmerada y personalizada, cuidando los más finos detalles.</p>
+              <a href="#contacto" class="btn btn-sm btn-outline-primary mt-3">Solicitar información</a>
             </div>
           </div>
         </div>
 
         <!-- Servicio 2 -->
         <div class="col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="img/concensionaria.jpg" class="card-img-top service-img" alt="Concesionario">
+          <div class="card h-100 shadow-sm border-0 overflow-hidden">
+            <div class="service-img-container">
+              <img src="img/concensionaria.jpg" class="card-img-top service-img" alt="Concesionario" loading="lazy">
+            </div>
             <div class="card-body">
               <h5 class="card-title text-primary">Concesionario de Alimentos</h5>
-              <p class="card-text">Comida casera con insumos de alta calidad para empresas, clínicas, universidades y más.</p>
+              <p class="card-text">Fusionamos la tradicional sazón casera con insumos de alta calidad y equipos con la mejor tecnología.</p>
+              <a href="#contacto" class="btn btn-sm btn-outline-primary mt-3">Solicitar información</a>
             </div>
           </div>
         </div>
 
         <!-- Servicio 3 -->
         <div class="col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="img/brasas.jpg" class="card-img-top service-img" alt="Brasas">
+          <div class="card h-100 shadow-sm border-0 overflow-hidden">
+            <div class="service-img-container">
+              <img src="img/brasas.jpg" class="card-img-top service-img" alt="Brasas" loading="lazy">
+            </div>
             <div class="card-body">
               <h5 class="card-title text-primary">Catering Brasas</h5>
-              <p class="card-text">Delicias del campo a la parrilla con atención profesional en cualquier lugar del país.</p>
+              <p class="card-text">Delicias del campo a la parrilla con atención profesional para eventos corporativos en cualquier lugar del país.</p>
+              <a href="#contacto" class="btn btn-sm btn-outline-primary mt-3">Solicitar información</a>
             </div>
           </div>
         </div>
 
         <!-- Servicio 4 -->
         <div class="col-md-6 col-lg-3">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="img/cafeteria.jpg" class="card-img-top service-img" alt="Cafetería">
+          <div class="card h-100 shadow-sm border-0 overflow-hidden">
+            <div class="service-img-container">
+              <img src="img/cafeteria.jpg" class="card-img-top service-img" alt="Cafetería" loading="lazy">
+            </div>
             <div class="card-body">
               <h5 class="card-title text-primary">Cafetería & Coffee Break</h5>
-              <p class="card-text">Espacios acogedores con opciones saludables para instituciones, oficinas y universidades.</p>
+              <p class="card-text">Ambientes acogedores con opciones saludables para instituciones, oficinas y universidades.</p>
+              <a href="#contacto" class="btn btn-sm btn-outline-primary mt-3">Solicitar información</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN CALIDAD -->
+  <section id="calidad" class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="text-primary fw-bold">Garantizando la Seguridad Alimentaria</h2>
+        <p class="text-warning"><em>— Control de calidad —</em></p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card: Nutrición -->
+        <div class="col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="calidad-img-container">
+              <img src="img/nutricion.jpg" class="card-img-top calidad-img" alt="Nutrición" loading="lazy">
+            </div>
+            <div class="card-body bg-white">
+              <h5 class="text-gold fw-bold">Nutrición</h5>
+              <p class="card-text">
+                Diseñamos menús equilibrados que promueven un estilo de vida saludable sin perder la sazón casera. Usamos ingredientes frescos, priorizando proveedores locales para asegurar calidad y apoyar emprendimientos.
+              </p>
             </div>
           </div>
         </div>
 
+        <!-- Card: Estándares -->
+        <div class="col-md-6">
+          <div class="card shadow-sm border-0 h-100">
+            <div class="calidad-img-container">
+              <img src="img/estandar.jpg" class="card-img-top calidad-img" alt="Seguimiento de Estándares" loading="lazy">
+            </div>
+            <div class="card-body bg-white">
+              <h5 class="text-gold fw-bold">Seguimiento de Estándares</h5>
+              <p class="card-text">
+                Evaluamos continuamente nuestros procesos para garantizar la seguridad y calidad alimentaria. Mantenemos prácticas actualizadas y medimos el desempeño con criterios exigentes del sector gastronómico.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <!-- SECCIÓN CALIDAD -->
-<section id="calidad" class="py-5 bg-light" data-aos="fade-up">
-  <div class="container">
-    <h2 class="text-center text-primary fw-bold mb-2">Garantizando la Seguridad Alimentaria</h2>
-    <p class="text-center text-warning mb-5"><em>— Control de calidad —</em></p>
 
-    <div class="row g-4">
-      <!-- Card: Nutrición -->
-      <div class="col-md-6">
-        <div class="card shadow-sm border-0 h-100">
-          <img src="img/nutricion.jpg" class="card-img-top calidad-img" alt="Nutrición">
-          <div class="card-body bg-white">
-            <h5 class="text-gold fw-bold">Nutrición</h5>
-            <p class="card-text">
-              Diseñamos menús equilibrados que promueven un estilo de vida saludable sin perder la sazón casera. Usamos ingredientes frescos, priorizando proveedores locales para asegurar calidad y apoyar emprendimientos.
-            </p>
-          </div>
-        </div>
+  <!-- SECCIÓN PREGUNTAS FRECUENTES -->
+  <section id="faq" class="py-5" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="text-primary fw-bold">Preguntas Frecuentes</h2>
+        <p class="text-muted">Resolvemos tus dudas sobre nuestros servicios</p>
       </div>
-
-      <!-- Card: Estándares -->
-      <div class="col-md-6">
-        <div class="card shadow-sm border-0 h-100">
-          <img src="img/estandar.jpg" class="card-img-top calidad-img" alt="Seguimiento de Estándares">
-          <div class="card-body bg-white">
-            <h5 class="text-gold fw-bold">Seguimiento de Estándares</h5>
-            <p class="card-text">
-              Evaluamos continuamente nuestros procesos para garantizar la seguridad y calidad alimentaria. Mantenemos prácticas actualizadas y medimos el desempeño con criterios exigentes del sector gastronómico.
-            </p>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="accordion" id="faqAccordion">
+            <!-- Pregunta 1 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                  ¿Qué áreas geográficas cubren con sus servicios?
+                </button>
+              </h3>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Atendemos en todo el Perú, con especial cobertura en Lima y Callao. Para eventos en otras regiones, contáctenos para coordinar los detalles logísticos.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pregunta 2 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  ¿Pueden adaptar menús para dietas especiales?
+                </button>
+              </h3>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Sí, ofrecemos opciones para diversas necesidades: vegetarianos, veganos, celíacos, diabéticos y otras restricciones alimentarias. Solo indíquenos sus requerimientos al momento de cotizar.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pregunta 3 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  ¿Cómo garantizan la calidad e higiene de los alimentos?
+                </button>
+              </h3>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Seguimos estrictos protocolos de seguridad alimentaria, con personal capacitado en buenas prácticas de manipulación, equipos de última tecnología y proveedores certificados. Realizamos controles de calidad en cada etapa del proceso.
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pregunta 4 -->
+            <div class="accordion-item border-0 shadow-sm mb-3">
+              <h3 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  ¿Cuál es el tiempo mínimo de anticipación para contratar sus servicios?
+                </button>
+              </h3>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Para eventos grandes recomendamos al menos 15 días de anticipación. Sin embargo, dependiendo de la disponibilidad, podemos atender solicitudes con menos tiempo. Contáctenos para evaluar su requerimiento.
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- SECCIÓN TESTIMONIOS -->
+  <section id="testimonios" class="py-5 bg-light" data-aos="fade-up">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="text-primary fw-bold">Lo que dicen nuestros clientes</h2>
+        <p class="text-muted">Experiencias reales con nuestros servicios</p>
+      </div>
+      
+      <div class="row g-4">
+        <!-- Testimonio 1 -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="mb-3">
+                <i class="fas fa-quote-left text-warning fa-2x"></i>
+              </div>
+              <p class="card-text mb-4">"Contratamos a Corcasur para el catering de nuestra convención anual y superaron todas nuestras expectativas. La presentación, sabor y servicio fueron impecables."</p>
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://randomuser.me/api/portraits/women/45.jpg" class="rounded-circle me-3" width="50" height="50" alt="Cliente" loading="lazy">
+                <div>
+                  <h6 class="mb-0">María Fernández</h6>
+                  <small class="text-muted">Directora de RRHH - Empresa ABC</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonio 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="mb-3">
+                <i class="fas fa-quote-left text-warning fa-2x"></i>
+              </div>
+              <p class="card-text mb-4">"Llevamos 3 años con el servicio de concesionario en nuestra clínica y la satisfacción de pacientes y personal ha aumentado notablemente. Menús variados y nutritivos."</p>
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle me-3" width="50" height="50" alt="Cliente" loading="lazy">
+                <div>
+                  <h6 class="mb-0">Juan Pérez</h6>
+                  <small class="text-muted">Gerente - Clínica San José</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonio 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body text-center p-4">
+              <div class="mb-3">
+                <i class="fas fa-quote-left text-warning fa-2x"></i>
+              </div>
+              <p class="card-text mb-4">"El catering brasas para nuestro evento corporativo fue el punto destacado según las encuestas de satisfacción. Profesionales, puntuales y con una sazón extraordinaria."</p>
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://randomuser.me/api/portraits/women/68.jpg" class="rounded-circle me-3" width="50" height="50" alt="Cliente" loading="lazy">
+                <div>
+                  <h6 class="mb-0">Laura Gómez</h6>
+                  <small class="text-muted">Event Manager - XYZ Corp</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACTO -->
-  <section id="contacto" class="py-5 bg-light" data-aos="fade-up">
+  <section id="contacto" class="py-5" data-aos="fade-up">
     <div class="container">
-      <h2 class="text-center text-primary fw-bold mb-4">Contáctanos</h2>
       <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <form id="contact-form">
-  <div class="mb-3">
-    <label for="nombre" class="form-label">Nombre</label>
-    <input type="text" class="form-control" name="nombre" required />
-  </div>
-  <div class="mb-3">
-    <label for="email" class="form-label">Correo Electrónico</label>
-    <input type="email" class="form-control" name="email" required />
-  </div>
-  <div class="mb-3">
-    <label for="mensaje" class="form-label">Mensaje</label>
-    <textarea class="form-control" name="mensaje" rows="5" required></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
-</form>
-
-<!-- Mensaje de respuesta -->
-<div id="form-status" class="mt-3"></div>
-
+        <div class="col-lg-8 text-center mb-5">
+          <h2 class="text-primary fw-bold">Contáctanos</h2>
+          <p class="lead">Estamos listos para atender tus requerimientos gastronómicos</p>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <h5 class="text-primary mb-4">Información de contacto</h5>
+              <ul class="list-unstyled">
+                <li class="mb-3">
+                  <i class="fas fa-phone-alt text-warning me-2"></i>
+                  <span>902053826</span>
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-map-marker-alt text-warning me-2"></i>
+                  <span>Contralmirante Mora 244 - Callao</span>
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-envelope text-warning me-2"></i>
+                  <span>info@corcasur.com</span>
+                </li>
+                <li class="mb-3">
+                  <i class="fas fa-clock text-warning me-2"></i>
+                  <span>Lunes a Viernes: 8:00 am - 6:00 pm</span>
+                </li>
+              </ul>
+              
+              <div class="mt-4">
+                <h6 class="text-primary mb-3">Síguenos</h6>
+                <div class="d-flex gap-3">
+                  <a href="#" class="text-decoration-none text-dark">
+                    <i class="fab fa-facebook-f fa-lg"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none text-dark">
+                    <i class="fab fa-instagram fa-lg"></i>
+                  </a>
+                  <a href="#" class="text-decoration-none text-dark">
+                    <i class="fab fa-linkedin-in fa-lg"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <form id="contact-form">
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" name="nombre" required />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo Electrónico</label>
+                  <input type="email" class="form-control" name="email" required />
+                </div>
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input type="tel" class="form-control" name="telefono" />
+                </div>
+                <div class="mb-3">
+                  <label for="servicio" class="form-label">Servicio de interés</label>
+                  <select class="form-select" name="servicio">
+                    <option value="">Seleccione un servicio</option>
+                    <option value="catering">Catering & Buffet</option>
+                    <option value="concesionario">Concesionario de Alimentos</option>
+                    <option value="brasas">Catering Brasas</option>
+                    <option value="cafeteria">Cafetería & Coffee Break</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+              </form>
+              
+              <!-- Mensaje de respuesta -->
+              <div id="form-status" class="mt-3"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-primary text-white text-center py-4">
+  <footer class="bg-primary text-white py-4">
     <div class="container">
-      <p>Contáctanos: 902053826 · Contralmirante Mora 244 - Callao</p>
-      <p>&copy; 2025 Corcasur. Todos los derechos reservados.</p>
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-3 mb-md-0">
+          <h5 class="mb-3">CORCASUR</h5>
+          <p class="mb-0">Servicios gastronómicos profesionales con más de 10 años de experiencia.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <p class="mb-1">Contáctanos: 902053826</p>
+          <p class="mb-1">Contralmirante Mora 244 - Callao</p>
+          <p class="mb-0">&copy; 2025 Corcasur. Todos los derechos reservados.</p>
+        </div>
+      </div>
     </div>
   </footer>
 
-  
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- AOS Animation JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 800,
-    once: true
-  });
-</script>
-<!-- Botón de WhatsApp -->
-<a href="https://wa.me/51902053826" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="60" height="60">
-</a>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      easing: 'ease-in-out'
+    });
+  </script>
+  
+  <!-- Botón de WhatsApp optimizado -->
+  <a href="https://wa.me/51902053826" class="whatsapp-btn" target="_blank" aria-label="WhatsApp">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" width="60" height="60" loading="lazy">
+  </a>
 
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-<script>
-  // Inicializar EmailJS
-  emailjs.init("C0ClG_c64uGAXwndi"); // 
-
-  // Enviar formulario
-  document.getElementById("contact-form").addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    emailjs.sendForm("prueba123", "template_qikturc", this)
-      .then(function () {
-        document.getElementById("form-status").innerHTML = '<div class="alert alert-success">Mensaje enviado correctamente ✅</div>';
-        document.getElementById("contact-form").reset();
-      }, function (error) {
-        console.error(error);
-        document.getElementById("form-status").innerHTML = '<div class="alert alert-danger">Error al enviar el mensaje ❌</div>';
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Inicializar EmailJS
+    emailjs.init("C0ClG_c64uGAXwndi");
+    
+    // Smooth scroll para navegación
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
       });
-  });
-</script>
+    });
 
+    // Enviar formulario
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      
+      const submitBtn = e.target.querySelector('button[type="submit"]');
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Enviando...';
+      
+      emailjs.sendForm("prueba123", "template_qikturc", this)
+        .then(function () {
+          document.getElementById("form-status").innerHTML = '<div class="alert alert-success">Mensaje enviado correctamente ✅</div>';
+          document.getElementById("contact-form").reset();
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar Mensaje';
+        }, function (error) {
+          console.error(error);
+          document.getElementById("form-status").innerHTML = '<div class="alert alert-danger">Error al enviar el mensaje ❌</div>';
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Enviar Mensaje';
+        });
+    });
+  </script>
 </body>
 </html>
