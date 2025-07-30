@@ -1,14 +1,15 @@
 :root {
-  --primary-color: #8B1E1E;     /* Rojo vino */
-  --secondary-color: #D4AF37;  /* Dorado suave */
-  --light-bg: #FAF6F0;         /* Fondo claro beige */
+  --primary-color: #66260B;     /* Marrón oscuro elegante */
+  --secondary-color: #CC8034;   /* Dorado cálido */
+  --light-bg: #DEC08E;          /* Beige claro dorado */
+  --hover-color: #5E0202;       /* Vino oscuro para efectos hover */
 }
 
-/*Mejora*/
 body {
   padding-top: 70px;
   font-family: 'Segoe UI', sans-serif;
-  color: #333333;
+  color: #2b1e17; /* tono marrón neutro */
+  background-color: var(--light-bg);
 }
 
 .bg-primary {
@@ -22,10 +23,11 @@ body {
 .btn-primary {
   background-color: var(--primary-color);
   border: none;
+  color: white;
 }
 
 .btn-primary:hover {
-  background-color: #6a1616;
+  background-color: var(--hover-color);
 }
 
 .btn-warning {
@@ -35,7 +37,7 @@ body {
 }
 
 .btn-warning:hover {
-  background-color: #b1902e;
+  background-color: #b36a1a;
   color: #000;
 }
 
@@ -97,6 +99,7 @@ body {
 .card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 0.5rem;
+  background-color: #fffdf9;
 }
 
 .card:hover {
@@ -123,11 +126,12 @@ body {
   z-index: 999;
   transition: transform 0.3s ease;
 }
+
 .logo-navbar {
   max-height: 55px;
   width: auto;
   filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.5));
-  background-color: rgba(255, 255, 255, 0.85); /* fondo blanco translúcido */
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 6px 10px;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -136,7 +140,6 @@ body {
 .logo-navbar:hover {
   transform: scale(1.05);
 }
-
 
 .whatsapp-btn:hover {
   transform: scale(1.1);
@@ -178,7 +181,7 @@ body {
   }
 
   .navbar-brand img {
-    max-height: 40px;
+    max-height: 70px;
   }
 
   .card {
