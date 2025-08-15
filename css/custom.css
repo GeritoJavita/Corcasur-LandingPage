@@ -211,11 +211,7 @@ body {
     height: auto;
   }
 
-  footer {
-    font-size: 14px;
-    padding: 20px 10px;
-  }
-
+  
   .whatsapp-btn img {
     width: 50px;
     height: 50px;
@@ -282,6 +278,42 @@ body {
     font-size: 0.85rem;
   }
 }
-footer .fa-instagram:hover { color: #E4405F; }
-footer .fa-tiktok:hover { color: #69C9D0; }
-footer .fa-facebook:hover { color: #1877F2; }
+
+.footer {
+  background: linear-gradient(135deg, #5E0202, #CC8034); /* Rojo a dorado */
+  color: #fff;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.footer-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #DEC08E; /* Dorado suave */
+  margin-bottom: 0.5rem;
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer a {
+  color: #DEC08E;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 450px) {
+  .footer {
+    text-align: center;
+  }
+}
